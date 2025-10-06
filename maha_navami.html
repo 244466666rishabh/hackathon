@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maha Navami – The Penultimate Celebration</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #ffcc33, #b30000);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    padding: 1rem;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 15px gold;
+    margin-bottom: 1rem;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { color: #ffd700; text-shadow: 0 0 15px #ff0000; }
+    50% { color: #ff4500; text-shadow: 0 0 30px #ffcc00; }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    gap: 1rem;
+    margin: 1rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+  }
+
+  .content div {
+    flex: 1 1 300px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .content h2 {
+    color: #ffeb99;
+    text-shadow: 0 0 10px #ff6600;
+    margin-bottom: 0.5rem;
+  }
+
+  .content img {
+    flex: 1 1 250px;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 200, 0, 0.9);
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .nav-buttons button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #ffcc33, #ff3300);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ffb3b3;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .nav-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ffd700;
+  }
+
+  /* Decorations */
+  .trishul, .diya {
+    position: absolute;
+    max-width: 15%;
+    height: auto;
+  }
+  .trishul.left { top: 50%; left: 1%; transform: translateY(-50%); }
+  .trishul.right { top: 50%; right: 1%; transform: translateY(-50%); }
+  .diya.top-left { top: 1%; left: 1%; }
+  .diya.top-right { top: 1%; right: 1%; }
+  .diya.bottom-left { bottom: 1%; left: 1%; }
+  .diya.bottom-right { bottom: 1%; right: 1%; }
+
+  @keyframes flicker { from { opacity: 0.8; } to { opacity: 1; } }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.5rem; }
+    .content div, .content img { flex: 1 1 90%; max-width: 90%; }
+    .nav-buttons button { font-size: 0.9rem; padding: 0.5rem 1rem; }
+    .trishul, .diya { max-width: 20%; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Decorations -->
+  <img src="assets/trishul.png" class="trishul left" alt="Trishul">
+  <img src="assets/trishul.png" class="trishul right" alt="Trishul">
+  <img src="assets/diya_left.png" class="diya top-left" alt="Diya">
+  <img src="assets/diya_right.png" class="diya top-right" alt="Diya">
+  <img src="assets/diya_left.png" class="diya bottom-left" alt="Diya">
+  <img src="assets/diya_right.png" class="diya bottom-right" alt="Diya">
+
+  <h1>🌼 Maha Navami – The Penultimate Celebration 🌼</h1>
+
+  <div class="content">
+    <div>
+      <h2>📖 The Legend</h2>
+      <p>
+        Maha Navami is the ninth day of Durga Puja, signifying the climax of the festival.  
+        On this day, devotees honor Goddess Durga as she defeats the last of Mahishasura’s forces.  
+        The day also symbolizes the victory of good over evil and prepares for the grand Vijayadashami celebrations.
+      </p>
+    </div>
+    <img src="assets/navami1.png" alt="Maha Navami Ritual">
+  </div>
+
+  <div class="content">
+    <img src="assets/navami2.jpeg" alt="Navami Puja Ritual">
+    <div>
+      <h2>🙏 Rituals & Traditions</h2>
+      <p>
+        Rituals include the *Sandhi Puja*, performed at the junction of Ashtami and Navami,  
+        marking the moment of the Goddess’ victory over the demon. Devotees offer flowers, fruits,  
+        and sweets, light *diyas*, and sing hymns praising Durga. Communities organize cultural programs,  
+        music, and dance, making this day spiritually and socially significant.  
+        The evening sees grand processions and elaborately decorated pandals.
+      </p>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="index.html"><button>⬅️ Back to Home</button></a>
+    <a href="maha_dashami.html"><button>Next ➡️</button></a>
+  </div>
+
+</body>
+</html>

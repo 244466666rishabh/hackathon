@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Story of Durga: The Triumph of Good Over Evil</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    background: radial-gradient(circle at center, #ffcc33 0%, #b30000 90%);
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 15px gold;
+    margin: 1rem 0;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px gold, 0 0 20px orange; }
+    to { text-shadow: 0 0 25px #ffd700, 0 0 40px red; }
+  }
+
+  .durga {
+    width: 60%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px gold;
+    margin-bottom: 1rem;
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .button-container button {
+    flex: 1 1 120px;
+    min-width: 120px;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(45deg, #ffcc33, #ff3300);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ffcc33;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .button-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px gold;
+  }
+
+  /* Decorations */
+  .trishul, .diya {
+    position: absolute;
+    max-width: 15%;
+    height: auto;
+  }
+
+  .trishul.left { top: 50%; left: 1%; transform: translateY(-50%); }
+  .trishul.right { top: 50%; right: 1%; transform: translateY(-50%); }
+
+  .diya.tl { top: 1%; left: 1%; }
+  .diya.tr { top: 1%; right: 1%; }
+  .diya.bl { bottom: 1%; left: 1%; }
+  .diya.br { bottom: 1%; right: 1%; }
+
+  @keyframes flicker { from { opacity: 0.8; } to { opacity: 1; } }
+  @keyframes pulse { from { filter: brightness(1); } to { filter: brightness(1.3); } }
+
+  #dhaak {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(45deg, #ff6600, #ff0000);
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    box-shadow: 0 0 12px gold;
+    z-index: 1000;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.5rem; }
+    .durga { width: 80%; max-width: 250px; }
+    .button-container button { font-size: 0.9rem; min-width: 100px; }
+    .trishul, .diya { max-width: 20%; }
+    #dhaak { font-size: 0.9rem; padding: 0.4rem 0.6rem; }
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- Background decor -->
+  <img src="assets/trishul.png" class="trishul left" alt="Trishul">
+  <img src="assets/trishul.png" class="trishul right" alt="Trishul">
+  <img src="assets/diya_left.png" class="diya tl" alt="Diya">
+  <img src="assets/diya_right.png" class="diya tr" alt="Diya">
+  <img src="assets/diya_left.png" class="diya bl" alt="Diya">
+  <img src="assets/diya_right.png" class="diya br" alt="Diya">
+
+  <!-- Dhaak music button -->
+  <button id="dhaak">🥁 Play Dhaak</button>
+  <audio id="dhaakSound" src="assets/dhaak.mp3"></audio>
+
+  <h1>🌺 The Story of Durga: The Triumph of Good Over Evil 🌺</h1>
+  <img src="assets/durga.png" alt="Maa Durga" class="durga">
+
+  <div class="button-container">
+    <button onclick="location.href='mahalaya.html'">Mahalaya/মহালয়া</button>
+    <button onclick="location.href='maha_soshthi.html'">Soshthi/ষষ্ঠী</button>
+    <button onclick="location.href='maha_saptami.html'">Saptami/সপ্তমী</button>
+    <button onclick="location.href='maha_ashtami.html'">Ashtami/অষ্টমী</button>
+    <button onclick="location.href='maha_navami.html'">Navami/নবমী</button>
+    <button onclick="location.href='maha_dashami.html'">Dashami/দশমী</button>
+  </div>
+
+  <script>
+    const dhaakBtn = document.getElementById('dhaak');
+    const dhaakSound = document.getElementById('dhaakSound');
+    let playing = false;
+    dhaakBtn.onclick = () => {
+      if (!playing) {
+        dhaakSound.play();
+        dhaakBtn.textContent = "🛑 Stop Dhaak";
+        playing = true;
+      } else {
+        dhaakSound.pause();
+        dhaakSound.currentTime = 0;
+        dhaakBtn.textContent = "🥁 Play Dhaak";
+        playing = false;
+      }
+    };
+  </script>
+
+</body>
+</html>

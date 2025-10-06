@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maha Saptami – The Sacred Bath of the Goddess</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #ffcc33, #b30000);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    padding: 1rem;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 15px gold;
+    margin: 1rem 0;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { color: #ffd700; text-shadow: 0 0 15px #ff0000; }
+    50% { color: #ff4500; text-shadow: 0 0 30px #ffcc00; }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .content div {
+    flex: 1 1 300px;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: rgba(0,0,0,0.3);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,0,0.3);
+  }
+
+  .content img {
+    flex: 1 1 250px;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255,200,0,0.9);
+  }
+
+  .back-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #ffcc33, #ff3300);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ffcc33;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .back-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px gold;
+  }
+
+  /* Decorations */
+  .trishul, .diya {
+    position: absolute;
+    max-width: 15%;
+    height: auto;
+  }
+  .trishul.left { top: 50%; left: 1%; transform: translateY(-50%); }
+  .trishul.right { top: 50%; right: 1%; transform: translateY(-50%); }
+  .diya.tl { top: 1%; left: 1%; }
+  .diya.tr { top: 1%; right: 1%; }
+  .diya.bl { bottom: 1%; left: 1%; }
+  .diya.br { bottom: 1%; right: 1%; }
+
+  @keyframes flicker { from { opacity: 0.8; } to { opacity: 1; } }
+  @keyframes glow { from { box-shadow: 0 0 20px rgba(255,180,0,0.7); } to { box-shadow: 0 0 80px rgba(255,100,0,1); } }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.5rem; }
+    .content div, .content img { flex: 1 1 90%; max-width: 90%; }
+    .back-btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
+    .trishul, .diya { max-width: 20%; }
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Decorations -->
+  <img src="assets/trishul.png" class="trishul left" alt="Trishul">
+  <img src="assets/trishul.png" class="trishul right" alt="Trishul">
+  <img src="assets/diya_left.png" class="diya tl" alt="Diya">
+  <img src="assets/diya_right.png" class="diya tr" alt="Diya">
+  <img src="assets/diya_left.png" class="diya bl" alt="Diya">
+  <img src="assets/diya_right.png" class="diya br" alt="Diya">
+
+  <!-- Title -->
+  <h1>🌼 Maha Saptami – The Sacred Bath of the Goddess 🌼</h1>
+
+  <!-- Sections -->
+  <div class="content">
+    <div>
+      <h2>📖 The Legend</h2>
+      <p>
+        The beginning of battle: Maha Saptami marks the official beginning of the battle between the goddess Durga and the demon king Mahishasura. Durga Puja, which culminates with Vijayadashami, is a celebration of her victory.
+      </p>
+    </div>
+    <img src="assets/fight.png" alt="Maha Saptami Ritual">
+  </div>
+
+  <div class="content">
+    <img src="assets/saptami2.jpeg" alt="Saptami Puja Ritual">
+    <div>
+      <h2>🙏 Rituals & Traditions</h2>
+      <p>
+        The rituals of the day include <i>Nabapatrika Snan</i> (holy bath),  
+        <i>Maha Snan</i>, and <i>Prana Pratishtha</i> — invoking the spirit of  
+        the Goddess into her idol. Devotees then offer <i>Pushpanjali</i>  
+        amid the beats of the <i>dhaak</i> and the fragrance of <i>shiuli</i> flowers.  
+        Communities celebrate with grandeur — pandals glow with lights,  
+        music fills the air, and families gather to share festive feasts  
+        of sweets and traditional delicacies.
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <a href="index.html"><button class="back-btn">⬅️ Back to Home</button></a>
+    <a href="maha_ashtami.html"><button class="back-btn">Next ➡️</button></a>
+  </div>
+
+</body>
+</html>
